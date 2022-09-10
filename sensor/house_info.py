@@ -1,5 +1,5 @@
 import time
-from datetime import date, datetime
+from datetime import date
 class HouseInfo: 
     def __init__(self,data):
         self.data = data 
@@ -15,8 +15,7 @@ class HouseInfo:
                 continue      
         return field_data
     
-    def get_data_by_date(self,field,rec_date):
-        rec_date = datetime.date
+    def get_data_by_date(self,field,rec_date=date.today()):        
         field_data = []
         for record in self.data:
             if(record['date']==rec_date.strftime("%m/%d/%y")):
