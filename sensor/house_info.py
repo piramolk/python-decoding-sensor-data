@@ -10,9 +10,7 @@ class HouseInfo:
             if(rec_area==0):
                 field_data.append(record[field])
             elif(rec_area==int(record['area'])):
-                field_data.append(record[field])
-            else:
-                continue      
+                field_data.append(record[field])    
         return field_data
     
     def get_data_by_date(self,field,rec_date=date.today()):        
